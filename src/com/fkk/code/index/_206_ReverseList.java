@@ -1,9 +1,12 @@
-package com.fkk.code;
+package com.fkk.code.index;
 
 import com.fkk.code.entity.ListNode;
 
 import java.util.List;
 
+/**
+ * 反转链表：https://leetcode-cn.com/problems/reverse-linked-list/
+ */
 public class _206_ReverseList {
 
     public static ListNode reverse_01(ListNode head) {
