@@ -1,4 +1,4 @@
-package com.fkk.code.index;
+package com.fkk.code.leetcode;
 
 /**
  * 合并数组： https://leetcode-cn.com/problems/sorted-merge-lcci/

@@ -1,8 +1,6 @@
-package com.fkk.code.index;
+package com.fkk.code.leetcode;
 
 import com.fkk.code.entity.ListNode;
-
-import java.util.List;
 
 /**
  * 反转链表：https://leetcode-cn.com/problems/reverse-linked-list/

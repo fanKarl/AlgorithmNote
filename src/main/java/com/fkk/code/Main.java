@@ -1,10 +1,10 @@
 package com.fkk.code;
 
-import com.fkk.code.index.MergeArrays;
+import com.fkk.code.leetcode.MergeArrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        MergeArrays.test();
+        AlgorithmManager.testSort();
     }
 }
