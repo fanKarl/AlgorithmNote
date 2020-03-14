@@ -125,4 +125,61 @@ public class SortAlgorithm {
         return mergeArrays;
     }
 
+
+    /**
+     * 13,15,6,2,21,7,9,18,11,44
+     */
+    public int[] quickSort(int[] arrays) {
+        return quickSort(arrays, 0, arrays.length - 1);
+    }
+
+    private int[] quickSort(int[] arrays, int left, int right) {
+        if (left < right) {
+            //标定基准，同时以基准对arrays left-right进行快速排序
+            int partition = partition(arrays, left, right);
+            //对基准左边数组进行快排
+            quickSort(arrays, left, partition - 1);
+            //对基准右边数组进行快排
+            quickSort(arrays, partition + 1, right);
+
+        }
+        return arrays;
+    }
+
+    private int partition(int[] arrays, int left, int right) {
+        int pivot = arrays[left];//锚定基准点
+        int j = right;
+        int i = left;
+        while (i < j) {
+            // 从右侧开始检查，找到第一个小于基数的元素位置
+            while (i < j && arrays[j] >= pivot) {
+                j--;
+            }
+
+            //从左侧开始找，找到第一个大于基数的元素位置
+            while (i < j && arrays[i] <= pivot) {
+                i++;
+            }
+
+            //只有位置不同的时候再交换
+            if (i != j) {
+                swap(arrays, i, j);
+            }
+
+        }
+        //同一位置没必要交换
+        if (left != i) {
+            swap(arrays, left, i);
+        }
+
+        return i;
+    }
+
+    private int[] swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        return array;
+    }
+
 }
