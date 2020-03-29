@@ -5,24 +5,21 @@ package com.fkk.code.leetcode;
  */
 public class MergeArrays {
 
-    public static void test() {
+    public static void testMergeArrays() {
         int[] a1 = {1, 2, 3, 0, 0, 0};
         int[] b1 = {2, 5, 6};
-        merge01(a1, 3, b1, 3);
+        mergeArrays(a1, 3, b1, 3);
 
         int[] a2 = {0};
         int[] b2 = {1};
-        merge01(a2,0,b2,1);//考察临界条件
+        mergeArrays(a2, 0, b2, 1);//考察临界条件
 
-        int[] a3 = {2,0};
+        int[] a3 = {2, 0};
         int[] b3 = {1};
-        merge01(a3,1,b3,1);
+        mergeArrays(a3, 1, b3, 1);
     }
 
-    /**
-     * 快速排序法
-     */
-    public static void merge01(int[] A, int m, int[] B, int n) {
+    public static void mergeArrays(int[] A, int m, int[] B, int n) {
 
         if (n == 0) {
             return;
@@ -65,4 +62,5 @@ public class MergeArrays {
             step--;
         }
     }
+
 }

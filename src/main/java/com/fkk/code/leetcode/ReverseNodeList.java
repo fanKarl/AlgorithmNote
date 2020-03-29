@@ -3,11 +3,11 @@ package com.fkk.code.leetcode;
 import com.fkk.code.entity.ListNode;
 
 /**
- * 反转链表：https://leetcode-cn.com/problems/reverse-linked-list/
+ * 206 反转链表：https://leetcode-cn.com/problems/reverse-linked-list/
  */
-public class _206_ReverseList {
+public class ReverseNodeList {
 
-    public static ListNode reverse_01(ListNode head) {
+    public static ListNode reverseNodeListA(ListNode head) {
 
         ListNode node = null;
         while (head != null) {
@@ -19,7 +19,7 @@ public class _206_ReverseList {
         return node;
     }
 
-    public static ListNode reverse_02(ListNode head) {
+    public static ListNode reverseNodeListB(ListNode head) {
 
         ListNode node = null;
         while (head != null) {
@@ -30,11 +30,4 @@ public class _206_ReverseList {
         }
         return node;
     }
-
-    public static ListNode reverse_03(ListNode head) {
-
-
-        return null;
-    }
-
 }
