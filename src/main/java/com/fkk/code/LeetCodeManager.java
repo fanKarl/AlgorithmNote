@@ -1,14 +1,19 @@
 package com.fkk.code;
 
+import com.fkk.code.leetcode.LengthOfLongestSubstring;
 import com.fkk.code.leetcode.LongestPalindrome;
 
 public class LeetCodeManager {
 
     public static void runSolution() {
 //        MergeArrays.testMergeArrays();
-        LongestPalindrome longestPalindrome = new LongestPalindrome();
-        String arrays = longestPalindrome.useCenterSpreadPlus("abbabb");
-        printArray("LongestPalindrome", arrays);
+//        LongestPalindrome longestPalindrome = new LongestPalindrome();
+//        String arrays = longestPalindrome.useCenterSpreadPlus("abbabb");
+//        printArray("LongestPalindrome", arrays);
+
+        LengthOfLongestSubstring substring = new LengthOfLongestSubstring();
+        int count = substring.solution("abcabcbb");
+        System.out.println("count = "+count);
     }
 
     private static void printArray(String key, String dstArrays) {

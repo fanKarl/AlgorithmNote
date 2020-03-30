@@ -1,7 +1,5 @@
 package com.fkk.code.leetcode;
 
-import java.util.stream.Stream;
-
 /**
  * 05. 最长回文字符串 https://leetcode-cn.com/problems/longest-palindromic-substring/
  */
@@ -23,7 +21,7 @@ public class LongestPalindrome {
         if (s == null || s.length() < 2) {
             return s;
         }
-        String dstStr = addBounds(s, '#');
+        String dstStr = addBoundaries(s, '#');
         int maxLength = 1;
 
         int start = 0;
@@ -55,7 +53,7 @@ public class LongestPalindrome {
         return step;
     }
 
-    private String addBounds(String src, char divider) {
+    private String addBoundaries(String src, char divider) {
         if (src == null || src.length() == 0) {
             return "";
         }
@@ -97,13 +95,9 @@ public class LongestPalindrome {
         int length = src.length();
         int i = left;
         int j = right;
-        while (i >= 0 && j < length) {
-            if (src.charAt(i) == src.charAt(j)) {
-                i--;
-                j++;
-            } else {
-                break;
-            }
+        while (i >= 0 && j < length && src.charAt(i) == src.charAt(j)) {
+            i--;
+            j++;
         }
         return src.substring(i + 1, j);
     }
