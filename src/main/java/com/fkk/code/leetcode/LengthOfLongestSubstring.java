@@ -1,17 +1,16 @@
 package com.fkk.code.leetcode;
 
-import com.fkk.code.utils.Log;
-
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 无重复字符的最长子串：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  */
 public class LengthOfLongestSubstring {
 
-    public int solutionB(String s) {
+    /**
+     * 滑动窗口法
+     */
+    public int scrollWindow(String s) {
         if (s == null || s.length() == 0) {
             return 0;
         }

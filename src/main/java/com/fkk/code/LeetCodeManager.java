@@ -1,7 +1,6 @@
 package com.fkk.code;
 
-import com.fkk.code.leetcode.LengthOfLongestSubstring;
-import com.fkk.code.leetcode.LongestPalindrome;
+import com.fkk.code.leetcode.PatternIsMatch;
 
 public class LeetCodeManager {
 
@@ -11,9 +10,17 @@ public class LeetCodeManager {
 //        String arrays = longestPalindrome.useCenterSpreadPlus("abbabb");
 //        printArray("LongestPalindrome", arrays);
 
-        LengthOfLongestSubstring substring = new LengthOfLongestSubstring();
-        int count = substring.solution("abcabcbb");
-        System.out.println("count = "+count);
+//        LengthOfLongestSubstring substring = new LengthOfLongestSubstring();
+//        int count = substring.solution("abcabcbb");
+//        System.out.println("count = "+count);
+
+
+        PatternIsMatch patternIsMatch = new PatternIsMatch();
+        System.out.println("{aa,a,false} = " + patternIsMatch.isMatch("aa", "a"));
+        System.out.println("{aa,a*,true} = " + patternIsMatch.isMatch("aa", "a*"));
+        System.out.println("{ab,.*,true} = " + patternIsMatch.isMatch("ab", ".*"));
+        System.out.println("{aab,c*a*b,true} = " + patternIsMatch.isMatch("aab", "c*a*b"));
+        System.out.println("{mississippi,mis*is*p*.,false} = " + patternIsMatch.isMatch("mississippi", "mis*is*p*."));
     }
 
     private static void printArray(String key, String dstArrays) {
